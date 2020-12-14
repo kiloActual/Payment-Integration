@@ -1,0 +1,84 @@
+{% extends 'donation/index.html' %}
+{% block content %}
+<section class="text-gray-700 body-font relative">
+
+  <section class="text-gray-700 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Your Donations Greatly Benefit 
+          <br class="hidden lg:inline-block">All Indian Veterans!
+        </h1>
+        <p class="mb-8 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent hendrerit dolor et ante gravida, quis aliquet justo placerat. Sed quis sapien faucibus, pretium ante vitae, sagittis augue. Suspendisse potenti. Praesent feugiat neque non vehicula venenatis. Etiam aliquam auctor est, elementum placerat eros faucibus eget.</p>
+       
+      </div>
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201902/indian-flag-2644512_1920_0.jpeg?lptE1ZoujAnTTNsuN_dlZhclndK.S.y0">
+      </div>
+    </div>
+  </section>
+
+    <div class="container bg-gray-100 px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Together lets support the families of the Martyrs</h1>
+      </div>
+      <form action="pay" method="POST">
+        {% csrf_token %}
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="name" class="leading-7 text-sm text-gray-100"></label>
+              <input type="text" id="name" placeholder="Name" name="name" class="w-full bg-gray rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="email" class="leading-7 text-sm text-gray-900"></label>
+              <input type="email" id="email" placeholder="Email"  name="email" class="w-full bg-gray rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <div class="relative">
+              <label for="amount" class="leading-7 text-sm text-gray-900"></label>
+              <input type="text" id="amount" placeholder="Amount(&#8377;)"  name="amount" class="w-full bg-gray rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+          </div>
+          <div class="p-2 w-full">
+            <button type="submit" class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-24 focus:outline-none hover:bg-indigo-300 rounded text-lg">Donate</button>
+          </div>	  
+        </div>
+      </div>
+      </form> 
+    </div>
+  </section>
+  <section class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-wrap md:-m-2 -m-1">
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://images.livemint.com/img/2020/05/03/600x338/ER_1588526192306_1588526192513.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://harishmarnad.com/wp-content/uploads/2016/01/Soldier.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Defense.gov_photo_essay_120722-A-XXX-001.jpg">
+          </div>
+        </div>
+        <div class="flex flex-wrap w-1/2">
+          <div class="md:p-2 p-1 w-full">
+            <img alt="gallery" class="w-full h-full object-cover object-center block" src="https://d1vdjc70h9nzd9.cloudfront.net/media/campaign/50000/50938/image/7fea036ffc1513d2cc7141b97a25a4a440bd1a52.jpg">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://corporatebytes.in/wp-content/uploads/indian-army.png">
+          </div>
+          <div class="md:p-2 p-1 w-1/2">
+            <img alt="gallery" class="w-full object-cover h-full object-center block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoKPSUWJLjFUc1-aVrprgYB5_FMH4LLeC-Tg&usqp=CAU">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+{% endblock content %}
